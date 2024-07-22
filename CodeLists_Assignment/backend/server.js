@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const app = express();
 const port = 5000;
 
@@ -21,5 +22,6 @@ const listRoutes = require('./routes/listRoutes.js');
 app.use('/api/users', userRoutes);
 app.use('/api/lists', listRoutes);
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => 
+  console.log(`Server running on port ${port}`));
  
